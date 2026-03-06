@@ -117,3 +117,9 @@ DELETE /candidates/{candidate_id}
   "resume_filename": "resume.pdf"
 }
 ```
+
+## Data Persistence
+
+Candidate metadata is stored in a **SQLite database** using **SQLAlchemy ORM**.
+
+Uploaded resume files are stored in the server filesystem inside the `resumes/` directory, and the file path is saved in the database.
